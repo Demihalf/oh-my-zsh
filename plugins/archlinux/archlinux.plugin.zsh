@@ -8,7 +8,7 @@ if [[ -x `which yaourt` ]]; then
   }
   alias yaconf='yaourt -C'        # Fix all configuration files with vimdiff
   # Pacman - https://wiki.archlinux.org/index.php/Pacman_Tips
-  alias yaupg='yaourt -Syu'        # Synchronize with repositories before upgrading packages that are out of date on the local system.
+  alias yaupg='yaourt -Syua'       # Synchronize with repositories before upgrading packages that are out of date on the local system.
   alias yasu='yaourt --sucre'      # Same as yaupg, but without confirmation
   alias yain='yaourt -S'           # Install specific package(s) from the repositories
   alias yains='yaourt -U'          # Install specific package not from the repositories but from a file
@@ -28,7 +28,7 @@ if [[ -x `which yaourt` ]]; then
   alias yamir='yaourt -Syy'                # Force refresh of all package lists after updating /etc/pacman.d/mirrorlist
 else
  upgrade() {
-   sudo pacman -Syu
+   sudo pacman -Syua
  }
 fi
 
