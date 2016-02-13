@@ -20,6 +20,7 @@ if [[ -x `which yaourt` ]]; then
   alias yalocs='yaourt -Qs'        # Search for package(s) in the local database
   alias yalst='yaourt -Qe'         # List installed packages, even those installed from AUR (they're tagged as "local")
   alias yaorph='yaourt -Qtd'       # Remove orphans using yaourt
+  alias yaro='yaourt -Rns $(yaourt -Qtdq)' # Remove orphans recursively
   # Additional yaourt alias examples
   if [[ -x `which abs` ]]; then
     alias yaupd='yaourt -Sy && sudo abs'   # Update and refresh the local package and ABS databases against repositories
